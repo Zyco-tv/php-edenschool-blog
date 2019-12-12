@@ -15,8 +15,8 @@ function showRegister() {
 function register() {
 
     if (isset($_POST['username']) && isset($_POST['password'])) {
-        $_SESSION['username'] = $_POST['username'];
-        $_SESSION['password'] = $_POST['password'];
+        $_SESSION['old']['username'] = $_POST['username'];
+        $_SESSION['old']['password'] = $_POST['password'];
         
         if (empty($_POST['username'])) {
             $_SESSION['errors']['usernameErr'] = "le username est requis";
@@ -25,11 +25,11 @@ function register() {
             $_SESSION['errors']['passwordErr'] = "le password est requis";
         }
         
-        if (!isset($_SESSION['error'])) {
+        if (!isset($_SESSION['errors'])) {
             require MODEL.'User.php';
             $user = getUser($_POST['username']);
             if ($user) {
-                $_SESSION['errors']['username'] = 'Le pseudo est déjà pris';
+                $_SESSION['errors']['usernameErr'] = 'Le pseudo est déjà pris';
                 header('Location: /register');
                 exit();
             }

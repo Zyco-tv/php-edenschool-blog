@@ -8,24 +8,7 @@
     <title>Login</title>
 </head>
 <body>
-<nav class="bg-white px-8 pt-2 shadow-md">
-     <div class="-mb-px flex justify-center">
-         <a class="no-underline text-teal-dark border-b-2 border-teal-dark uppercase tracking-wide font-bold text-xs py-3 mr-8" href="/">
-             Home
-         </a>
-         <a class="no-underline text-grey-dark border-b-2 border-transparent uppercase tracking-wide font-bold text-xs py-3 mr-8" href="/articles">
-             Article
-         </a>
-         <a class="no-underline text-grey-dark border-b-2 border-transparent uppercase tracking-wide font-bold text-xs py-3 mr-8" href="#">
-             Categorie
-         </a>
-         <a class="no-underline text-grey-dark border-b-2 border-transparent uppercase tracking-wide font-bold text-xs py-3" href="#">
-             Settings
-         </a>
-     </div>
-</nav>
-
-<div class="bg-blue-400 h-screen w-screen">
+<div class="bg-gray-400 h-screen w-screen">
     <div class="flex flex-col items-center flex-1 h-full justify-center px-4 sm:px-0">
         <div class="flex rounded-lg shadow-lg w-full sm:w-3/4 lg:w-1/2 bg-white sm:mx-0" style="height: 500px">
             <div class="flex flex-col w-full md:w-1/2 p-4">
@@ -34,7 +17,7 @@
                     <div class="w-full mt-4">
                         <form class="form-horizontal w-3/4 mx-auto" method="POST" action="#">
                             <div class="flex flex-col mt-4">
-                                <input id="email" type="text" class="flex-grow h-8 px-2 border rounded border-grey-400" name="email" value="" placeholder="Pseudo">
+                                <input id="email" type="text" class="flex-grow h-8 px-2 border rounded border-grey-400" name="username" value="" placeholder="Pseudo">
                             </div>
                             <div class="flex flex-col mt-4">
                                 <input id="password" type="password" class="flex-grow h-8 px-2 rounded border border-grey-400" name="password" required placeholder="Password">

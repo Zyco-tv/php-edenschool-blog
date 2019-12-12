@@ -1,13 +1,3 @@
-<?php
-function getError($field) {
-  if(isset($_SESSION['errors'][$field])) {
-      $error = $_SESSION['errors'][$field];
-      unset($_SESSION['errors'][$field]);
-      return $error;
-  }
-}
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,9 +33,9 @@ function getError($field) {
 									type="text"
 									name="username"
 									placeholder="Pseudo"
+									value="<?php echo getold('username');?>"
 								/>
 								<span class="text-xs italic text-red-500"><?php echo getError('usernameErr')?></span>
-								<span class="text-xs italic text-red-500"><?php echo isset($_SESSION['errors']['username']) ? $_SESSION['errors']['username'] : "";?></span>
 							</div>
 							<div class="mb-4 md:flex md:justify-between">
 								<div class="mb-4 md:mr-2 md:mb-0">

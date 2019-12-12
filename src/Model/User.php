@@ -8,6 +8,7 @@ function storeUser(){
         'password' => $_POST['password']
     ]);
 }
+
 function getUser($username){
     global $bdd;
     $req = $bdd->prepare('SELECT * FROM users WHERE username = :username');
