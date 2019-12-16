@@ -5,9 +5,17 @@ function showLogin() {
 }
 function login() {
     //gere les erreur 
+
+    //
     require MODEL.'User.php';
-    getUser();
-    header('Location: /articles');
+    $user = getUser($_POST);
+    if ($user) {
+        $_SESSION['user'] = $user;
+        header('Location: /articles');
+        exit();
+    } else {
+        header('Location: /login');
+    }
 }
 function showRegister() {
     require VIEW . "Auth/register.php";

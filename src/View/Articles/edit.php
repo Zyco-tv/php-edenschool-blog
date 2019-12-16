@@ -1,13 +1,4 @@
-<?php
-function getError($field) {
-  if(isset($_SESSION['error'][$field])) {
-      $error = $_SESSION['error'][$field];
-      unset($_SESSION['error'][$field]);
-      return $error;
-  }
-}
 
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

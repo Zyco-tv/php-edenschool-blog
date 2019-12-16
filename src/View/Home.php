@@ -57,7 +57,7 @@
         <div class="bg-white rounded-lg overflow-hidden shadow relative">
           <img class="h-56 w-full object-cover object-center" src="https://images.unsplash.com/photo-1457282367193-e3b79e38f207?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1654&q=80" alt="">
           <div class="p-4 h-auto md:h-40 lg:h-48">
-            <a href="#" class="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
+            <a href="/articles/<?php echo $article['slug']; ?>" class="block text-blue-500 hover:text-blue-600 font-semibold mb-2 text-lg md:text-base lg:text-lg">
             <?php echo $article['title']; ?>
             </a>
             <div class="text-gray-600 text-sm leading-relaxed block md:text-xs lg:text-sm">
